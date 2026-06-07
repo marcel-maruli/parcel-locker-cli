@@ -2,20 +2,6 @@ import * as readline from "readline";
 import { state } from "./store";
 import { handleCommand } from "./commands/commandHandler";
 import { showHelp } from "./commands/commandHelp";
-import { getSuggestion } from "./utils/getSuggestion";
-
-const ALL_COMMANDS = [
-  "add-locker",
-  "reserve",
-  "release",
-  "queue",
-  "list-lockers",
-  "status",
-  "help",
-  "exit",
-  "login",
-  "logout",
-];
 
 const rl = readline.createInterface({
   input: process.stdin,
