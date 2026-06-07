@@ -1,6 +1,7 @@
 import { state } from "../store";
 import * as lockerSvc from "../services/lockerService";
 import * as queueSvc from "../services/queueService";
+import { getUserStatus } from "../services/userService";
 import { getSuggestion } from "../utils/getSuggestion";
 
 export const handleCommand = (cmd: string, args: string[]): string => {
@@ -24,6 +25,9 @@ export const handleCommand = (cmd: string, args: string[]): string => {
 
     case "list-lockers":
       return lockerSvc.formatLockerList();
+
+    case "status":
+      return getUserStatus(user as string);
 
     default:
       return getSuggestion(cmd) || "";
