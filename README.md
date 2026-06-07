@@ -67,6 +67,8 @@ Once the application is running, type "help" to see the full list of available c
 
 - release <id>: Free a locker.
 
+- queue <id>: Join the waiting queue for a specific locker.
+
 - status: Check your locker assignments and queue positions.
 
 - Built with professional software engineering standards.
